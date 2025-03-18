@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo de Nombres</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresa nombres para el sorteo</h1>
+        <div class="input-section">
+            <input type="text" id="nombreInput" placeholder="Escribe un nombre">
+            <button onclick="agregarNombre()">Añadir</button>
+        </div>
+        <ul id="listaNombres"></ul>
+        <button onclick="sortearNombre()">Sortear</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        let nombres = [];
+
+        function agregarNombre() {
+            let input = document.getElementById("nombreInput");
+            let nombre = input.value.trim();
+            
+            if (nombre === "") {
+                alert("Por favor, ingresa un nombre válido.");
+                return;
+            }
+            
+            nombres.push(nombre);
+            let lista = document.getElementById("listaNombres");
+            let nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = nombre;
+            lista.appendChild(nuevoElemento);
+            
+            input.value = "";
+        }
+
+        function sortearNombre() {
+            if (nombres.length === 0) {
+                alert("No hay nombres en la lista para sortear.");
+                return;
+            }
+            let indiceAleatorio = Math.floor(Math.random() * nombres.length);
+            document.getElementById("resultado").textContent = "Nombre sorteado: " + nombres[indiceAleatorio];
+        }
+    </script>
+</body>
+</html>

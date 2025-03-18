@@ -1,0 +1,109 @@
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #ecf0f1;
+    --color-tertiary: #2ecc71;
+    --color-button: #e74c3c;
+    --color-button-hover: #c0392b;
+    --color-text: #2c3e50;
+    --color-white: #ffffff;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+/* Contenedor de entrada */
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.button-add {
+    padding: 10px 15px;
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background 0.3s;
+}
+
+.button-add:hover {
+    background-color: #27ae60;
+}
+
+/* Lista de nombres */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    background: var(--color-white);
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-tertiary);
+}
+
+/* Botón de sorteo */
+.button-draw {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
